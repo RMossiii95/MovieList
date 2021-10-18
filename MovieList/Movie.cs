@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,14 +6,19 @@ namespace MovieList
 {
     class Movie
     {
-        public string Movies { get; set; }
+        public string MovieName { get; set; }
 
-        public string Genres { get; set; }
+        public string Genre { get; set; }
 
-        public Movie(string Movies, string Genres)
+        public Movie(string moviename, string genre)
         {
-            this.Movies = Movies;
-            this.Genres = Genres;
+            this.MovieName = moviename;
+            this.Genre = genre;
+        }
+
+        public void PrintMovie()
+        {
+            Console.WriteLine($"{this.MovieName} - {this.Genre}");
         }
 
 
